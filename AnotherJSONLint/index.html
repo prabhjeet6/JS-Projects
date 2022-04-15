@@ -13,23 +13,22 @@
 						function validateJSON(){
 
 						let jsonInput=document.getElementById("form-floating ").firstElementChild.nextElementSibling.value;
-						console.log(jsonInput);
 						try{
 						JSON.parse(jsonInput);
-						document.getElementById("successAlert ").innerHTML="Valid JSON ";
-						document.getElementById("successAlert ").style.display='block';
+						document.getElementById("successAlert").innerHTML="Valid JSON ";
+						document.getElementById("successAlert").style.display='block';
 						}
 						catch(err){
-						document.getElementById("failAlert ").innerHTML="Invalid JSON!! ";
-						document.getElementById("failAlert ").style.display='block';
+						document.getElementById("failAlert").innerHTML="Invalid JSON!! ";
+						document.getElementById("failAlert").style.display='block';
 						}
 						}
 						function clear(){
                         document.getElementById("floatingTextarea ").innerHTML='';
-						document.getElementById("successAlert ").innerHTML=" ";
-						document.getElementById("successAlert ").style.display='none';
-						document.getElementById("failAlert ").innerHTML=" ";
-						document.getElementById("failAlert ").style.display='none';
+						document.getElementById("successAlert").innerHTML=" ";
+						document.getElementById("successAlert").style.display='none';
+						document.getElementById("failAlert").innerHTML=" ";
+						document.getElementById("failAlert").style.display='none';
 						
 						}
 					</script>
@@ -42,18 +41,17 @@
 						<div class="form-floating " id="form-floating ">
 							<label for="floatingTextarea " style="margin-left:5% ">Enter your JSON</label>
 							<textarea class="form-control "  id="floatingTextarea " style="height: 300px ; width:80vw ; margin-left:5% "></textarea>
-							   <br/>
+							<br/>
 						</div>
-						<div>
-								
+						<div>	
 							<input class="btn btn-primary " style="margin-left:5%; " type="submit " onclick=validateJSON() value="Validate ">
-								<input class="btn btn-primary " style="margin-left:5% " type="submit " onclick=clear() value="Clear ">
-									<br/>
-								</div>		
-								<div class="alert alert-success " role="alert " "id="successAlert" style="display: none;">
-	</div>
-	<div class="alert alert-danger" role="alert" id="failAlert" style="display: none;">
-	</div>
-	</body>
+							<input class="btn btn-primary " style="margin-left:5% " type="submit " onclick=clear() value="Clear ">
+							<br/>
+						</div>		
+						<div class="alert alert-success " role="alert " id="successAlert" style="display: none;">
+	                    </div>
+	                    <div class="alert alert-danger" role="alert" id="failAlert" style="display: none;">
+	                   </div>
+	               </body>
 
 </html>
