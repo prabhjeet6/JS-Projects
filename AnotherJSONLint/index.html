@@ -11,12 +11,13 @@
 					</head>
 					<script  type = "text/javascript " >
 						function validateJSON(){
-
+                        
 						let jsonInput=document.getElementById("form-floating").firstElementChild.nextElementSibling.value;
 						try{
-						JSON.parse(jsonInput);
+						let jsonObject=JSON.parse(jsonInput);
 						document.getElementById("successAlert").innerHTML="Valid JSON ";
 						document.getElementById("successAlert").style.display='block';
+						document.getElementById("form-floating").firstElementChild.nextElementSibling.value=JSON.stringify(jsonObject);
 						}
 						catch(err){
 						document.getElementById("failAlert").innerHTML="Invalid JSON!! ";
