@@ -12,7 +12,7 @@
 					<script  type = "text/javascript " >
 						function validateJSON(){
 
-						let jsonInput=document.getElementById("form-floating ").firstElementChild.nextElementSibling.value;
+						let jsonInput=document.getElementById("form-floating").firstElementChild.nextElementSibling.value;
 						try{
 						JSON.parse(jsonInput);
 						document.getElementById("successAlert").innerHTML="Valid JSON ";
@@ -23,8 +23,9 @@
 						document.getElementById("failAlert").style.display='block';
 						}
 						}
-						function clear(){
-                        document.getElementById("floatingTextarea ").innerHTML='';
+						function clearTextArea(){
+							
+						document.getElementById("form-floating").firstElementChild.nextElementSibling.value='';
 						document.getElementById("successAlert").innerHTML=" ";
 						document.getElementById("successAlert").style.display='none';
 						document.getElementById("failAlert").innerHTML=" ";
@@ -38,20 +39,20 @@
 							<span class="navbar-brand mb-0 h1 ">Another JSONLint</span>
 						</nav>
 						<br/>
-						<div class="form-floating " id="form-floating ">
+						<div class="form-floating" id="form-floating">
 							<label for="floatingTextarea " style="margin-left:5% ">Enter your JSON</label>
 							<textarea class="form-control "  id="floatingTextarea " style="height: 300px ; width:80vw ; margin-left:5% "></textarea>
 							<br/>
 						</div>
 						<div>	
 							<input class="btn btn-primary " style="margin-left:5%; " type="submit " onclick=validateJSON() value="Validate ">
-							<input class="btn btn-primary " style="margin-left:5% " type="submit " onclick=clear() value="Clear ">
+							<input class="btn btn-primary " style="margin-left:5% " type="submit " onclick=clearTextArea() value="Clear ">
 						</div>
 						<br/>		
 						<div class="alert alert-success " role="alert " id="successAlert" style="display: none;">
 	                    </div>
 	                    <div class="alert alert-danger" role="alert" id="failAlert" style="display: none;">
-	                   </div>
+	                   <Tex/div>
 	               </body>
 
 </html>
